@@ -29,6 +29,17 @@ const pAequorFactory = (specimenNum, dna) => {
       let base = dna[baseIndex];
       let newBase = returnRandBase(base);
       dna.splice(baseIndex, 1, newBase);
+    },
+    compareDNA(pAequor) {
+      let dnaTwo = pAequor.dna;
+      let similarities = 0;
+      for (let i = 0; i < 15; i++) {
+        if (dna[i] == dnaTwo[i]) {
+          similarities++;
+        }
+      }
+      console.log(`Specimin #1 and specimin #2 have ${similarities / 15}% DNA in common.`);
     }
+    
   }
-}
+};
