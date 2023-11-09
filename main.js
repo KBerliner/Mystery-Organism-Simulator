@@ -38,7 +38,7 @@ const pAequorFactory = (specimenNum, dna) => {
           similarities++;
         }
       }
-      console.log(`Specimin #1 and specimin #2 have ${similarities / 15}% DNA in common.`);
+      console.log(`Specimen #1 and specimen #2 have ${similarities / 15}% DNA in common.`);
     },
     willLikelySurvive() {
       let survivalBases = dna.filter((base) => base === 'C' || base === 'G');
@@ -50,3 +50,11 @@ const pAequorFactory = (specimenNum, dna) => {
     }
   }
 };
+
+// Specimen Array
+
+let specimenArray = [];
+
+for (let i = 1; i <= 30; i++) {
+  specimenArray.push(pAequorFactory(i, mockUpStrand()));
+}
