@@ -13,7 +13,14 @@ const mockUpStrand = () => {
   return newStrand;
 };
 
+// Factory Function
 
+const pAequorFactory = (specimenNum, dna) => {
+  return {
+    specimenNum: specimenNum,
+    dna: dna
+  }
+}
 
 
 
