@@ -39,7 +39,14 @@ const pAequorFactory = (specimenNum, dna) => {
         }
       }
       console.log(`Specimin #1 and specimin #2 have ${similarities / 15}% DNA in common.`);
+    },
+    willLikelySurvive() {
+      let survivalBases = dna.filter((base) => base === 'C' || base === 'G');
+      if ((survivalBases.length / 15) > 0.6) {
+        return true;
+      } else {
+        return false;
+      }
     }
-    
   }
 };
